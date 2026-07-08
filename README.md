@@ -1,5 +1,4 @@
-# 🐍 Python Basics Notes
-# DAY - 1
+# 🐍 DAY 1 - Python Basics Notes
 
 ---
 
@@ -518,3 +517,432 @@ print(sum)
 # DAY - 1 PROGRAMS FOR BETTER REFERENCE
 
 - [📂 DAY1](./DAY1/)
+
+
+# 🐍 DAY 2 - Strings & Conditional Statements
+
+---
+
+# Strings
+
+A **string** is a data type that stores a sequence of characters.
+
+> **Note:** Strings are **immutable**, meaning their characters cannot be modified after creation.
+
+---
+
+# Creating Strings
+
+Strings can be created using:
+
+### Single Quotes
+
+```python
+str1 = 'Sanchita'
+```
+
+### Double Quotes
+
+```python
+str2 = "Sanchita"
+```
+
+### Triple Quotes
+
+```python
+str3 = """Sanchita"""
+```
+
+Triple quotes are generally used for multi-line strings.
+
+---
+
+# Escape Sequence Characters
+
+Escape sequences are special characters used for formatting text.
+
+| Escape Sequence | Meaning |
+|----------------|---------|
+| `\n` | New Line |
+| `\t` | Tab Space |
+
+### Example
+
+```python
+print("Hello\nWorld")
+```
+
+Output:
+
+```
+Hello
+World
+```
+
+---
+
+# Operations on Strings
+
+## 1. Concatenation
+
+Joining two or more strings together.
+
+```python
+str1 = "Hello"
+str2 = "World"
+
+print(str1 + str2)
+```
+
+Output
+
+```
+HelloWorld
+```
+
+---
+
+## 2. Finding Length
+
+The `len()` function returns the length of a string.
+
+```python
+str = "Python"
+
+print(len(str))
+```
+
+Output
+
+```
+6
+```
+
+> **Note:** Spaces and special characters are also counted.
+
+Example
+
+```python
+print(len("Hello World"))
+```
+
+Output
+
+```
+11
+```
+
+---
+
+# Indexing
+
+Indexing is the process of assigning positions to characters in a string.
+
+Example
+
+```text
+String = SANCHITA ROUTRAY
+
+Index:
+ S  A  N  C  H  I  T  A     R  O  U  T  R  A  Y
+ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+```
+
+Accessing characters
+
+```python
+str = "SANCHITA"
+
+print(str[0])
+```
+
+Output
+
+```
+S
+```
+
+### Strings are Immutable
+
+```python
+str[0] = "B"
+```
+
+❌ Not Allowed
+
+You can access characters using indexing, but you cannot modify them.
+
+---
+
+# Slicing
+
+Slicing is used to access a part of a string.
+
+## Syntax
+
+```python
+string[start_index : end_index]
+```
+
+> The ending index is **not included**.
+
+### Examples
+
+```python
+str = "SANCHITA"
+
+print(str[:4])
+```
+
+Output
+
+```
+SANC
+```
+
+```python
+print(str[4:])
+```
+
+Output
+
+```
+HITA
+```
+
+Equivalent to
+
+```python
+str[4 : len(str)]
+```
+
+---
+
+# Negative Indexing
+
+Negative indexing starts from the end of the string.
+
+Example
+
+```text
+String = SANCHITA
+
+Index:
+-8 -7 -6 -5 -4 -3 -2 -1
+ S  A  N  C  H  I  T  A
+```
+
+Example
+
+```python
+str = "SANCHITA"
+
+print(str[-1])
+```
+
+Output
+
+```
+A
+```
+
+---
+
+# String Functions
+
+Assume
+
+```python
+str = "I am a coder"
+```
+
+---
+
+## endswith()
+
+Checks whether the string ends with the given substring.
+
+```python
+str.endswith("coder")
+```
+
+Returns
+
+```
+True
+```
+
+---
+
+## capitalize()
+
+Capitalizes the first character.
+
+```python
+str.capitalize()
+```
+
+Output
+
+```
+I am a coder
+```
+
+---
+
+## replace()
+
+Replaces all occurrences of an old substring with a new substring.
+
+```python
+str.replace("coder", "developer")
+```
+
+Output
+
+```
+I am a developer
+```
+
+---
+
+## find()
+
+Returns the index of the first occurrence.
+
+```python
+str.find("coder")
+```
+
+Output
+
+```
+7
+```
+
+If not found, it returns **-1**.
+
+---
+
+## count()
+
+Counts the number of occurrences of a substring.
+
+```python
+str.count("a")
+```
+
+---
+
+# Conditional Statements
+
+Conditional statements are used to make decisions in a program.
+
+---
+
+# if Statement
+
+### Syntax
+
+```python
+if condition:
+    statement
+```
+
+Example
+
+```python
+age = 18
+
+if age >= 18:
+    print("Eligible to Vote")
+```
+
+---
+
+# if-else Statement
+
+### Syntax
+
+```python
+if condition:
+    statement1
+else:
+    statement2
+```
+
+Example
+
+```python
+num = 10
+
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+---
+
+# if-elif-else Statement
+
+Used to check multiple conditions.
+
+### Syntax
+
+```python
+if condition1:
+    statement1
+
+elif condition2:
+    statement2
+
+...
+
+else:
+    statementN
+```
+
+Example
+
+```python
+marks = 82
+
+if marks >= 90:
+    print("Grade A")
+
+elif marks >= 75:
+    print("Grade B")
+
+elif marks >= 50:
+    print("Grade C")
+
+else:
+    print("Fail")
+```
+
+---
+
+# Summary
+
+✅ Strings
+
+- Creating Strings
+- Escape Sequences
+- String Operations
+- Indexing
+- Slicing
+- Negative Indexing
+- String Functions
+
+✅ Conditional Statements
+
+- if
+- if-else
+- if-elif-else
+
+---
+
+# DAY - 2 PROGRAMS FOR BETTER REFERENCE
+
+- [📂 DAY2](./DAY2/)
