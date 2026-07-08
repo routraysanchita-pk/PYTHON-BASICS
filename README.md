@@ -924,6 +924,505 @@ else:
 
 ---
 
+# Nested if-else Statement
+
+A **nested if-else** statement means placing one `if` statement inside another `if` or `else` block. It is used when multiple conditions depend on one another.
+
+## Syntax
+
+```python
+if condition1:
+    if condition2:
+        statement1
+    else:
+        statement2
+else:
+    statement3
+```
+
+---
+
+## Example 1: Check Positive and Even Number
+
+```python
+num = 12
+
+if num > 0:
+    if num % 2 == 0:
+        print("Positive Even Number")
+    else:
+        print("Positive Odd Number")
+else:
+    print("Negative Number")
+```
+
+### Output
+
+```text
+Positive Even Number
+```
+
+---
+
+## Example 2: Eligibility for Scholarship
+
+```python
+marks = 85
+
+if marks >= 50:
+    if marks >= 80:
+        print("Eligible for Scholarship")
+    else:
+        print("Passed but Not Eligible for Scholarship")
+else:
+    print("Failed")
+```
+
+### Output
+
+```text
+Eligible for Scholarship
+```
+> **Note:** Use **nested `if-else`** when one condition needs to be checked only after another condition is satisfied.
+
+---
+
 # DAY - 2 PROGRAMS FOR BETTER REFERENCE
 
 - [📂 DAY2](./DAY2/)
+
+---
+
+# 🐍 Day 3: Lists & Tuples
+
+---
+
+# Lists
+
+A **list** is a built-in data type that stores a collection of values.
+
+Lists can store elements of **different data types** (int, float, string, etc.) together.
+
+## Creating a List
+
+```python
+marks = [95, 87, 20, 19, 76]
+```
+
+---
+
+## Accessing Elements
+
+Use the index of the element.
+
+### Syntax
+
+```python
+list_name[index]
+```
+
+### Example
+
+```python
+marks[0]
+```
+
+Output
+
+```text
+95
+```
+
+---
+
+## Finding Length of a List
+
+Use the `len()` function.
+
+### Syntax
+
+```python
+len(list_name)
+```
+
+### Example
+
+```python
+len(marks)
+```
+
+Output
+
+```text
+5
+```
+
+---
+
+## List with Multiple Data Types
+
+Lists can store different data types together.
+
+```python
+student = ["Karan", 19, "Delhi"]
+```
+
+---
+
+## Lists are Mutable
+
+Lists are mutable, meaning their elements can be modified.
+
+### Example
+
+```python
+student = ["Karan", 19, "Delhi"]
+
+student[0] = "Arjun"
+
+print(student)
+```
+
+Output
+
+```python
+['Arjun', 19, 'Delhi']
+```
+
+---
+
+## List Slicing
+
+List slicing works the same way as string slicing.
+
+### Syntax
+
+```python
+list_name[start_index:end_index]
+```
+
+Example
+
+```python
+marks = [95, 87, 20, 19, 76]
+
+print(marks[1:4])
+```
+
+Output
+
+```python
+[87, 20, 19]
+```
+
+---
+
+# List Methods
+
+Assume
+
+```python
+lst = [2, 1, 3]
+```
+
+---
+
+## append()
+
+Adds one element to the end of the list.
+
+```python
+lst.append(4)
+```
+
+Output
+
+```python
+[2, 1, 3, 4]
+```
+
+---
+
+## sort()
+
+Sorts the list in ascending order.
+
+```python
+lst.sort()
+```
+
+Output
+
+```python
+[1, 2, 3]
+```
+
+---
+
+## sort(reverse=True)
+
+Sorts the list in descending order.
+
+```python
+lst.sort(reverse=True)
+```
+
+Output
+
+```python
+[3, 2, 1]
+```
+
+---
+
+## reverse()
+
+Reverses the list.
+
+```python
+lst.reverse()
+```
+
+---
+
+## insert()
+
+Inserts an element at the given index.
+
+### Syntax
+
+```python
+lst.insert(index, element)
+```
+
+Example
+
+```python
+lst.insert(1, 10)
+```
+
+Output
+
+```python
+[2, 10, 1, 3]
+```
+
+---
+
+## remove()
+
+Removes the first occurrence of an element.
+
+```python
+lst.remove(1)
+```
+
+---
+
+## pop()
+
+Removes the element at the given index.
+
+```python
+lst.pop(2)
+```
+
+---
+
+## Important Note
+
+```python
+lst = [3, 1, 2]
+
+print(lst.sort())
+```
+
+Output
+
+```text
+None
+```
+
+Because `sort()` modifies the original list and returns nothing.
+
+Correct way:
+
+```python
+lst.sort()
+print(lst)
+```
+
+Output
+
+```python
+[1, 2, 3]
+```
+
+---
+
+# Tuples
+
+A **tuple** is a built-in data type used to store an immutable sequence of values.
+
+### Creating a Tuple
+
+```python
+marks = (87, 64, 98, 51, 29)
+```
+
+---
+
+## Tuples are Immutable
+
+Tuple elements **cannot be modified**.
+
+```python
+marks[1] = 2
+```
+
+❌ This operation is not allowed.
+
+---
+
+## Accessing Tuple Elements
+
+### Syntax
+
+```python
+tuple_name[index]
+```
+
+### Example
+
+```python
+marks[0]
+```
+
+Output
+
+```text
+87
+```
+
+---
+
+## Length of a Tuple
+
+Use the `len()` function.
+
+```python
+len(marks)
+```
+
+Output
+
+```text
+5
+```
+
+---
+
+## Single Value Tuple
+
+When creating a tuple with only one element, a comma **must** be used.
+
+```python
+marks = (87,)
+```
+
+Without the comma,
+
+```python
+marks = (87)
+```
+
+Python treats it as an integer, **not** a tuple.
+
+---
+
+## Tuple Slicing
+
+Tuple slicing works exactly like list slicing.
+
+### Example
+
+```python
+marks = (87, 64, 98, 51, 29)
+
+print(marks[1:4])
+```
+
+Output
+
+```python
+(64, 98, 51)
+```
+
+---
+
+## Tuple with Different Data Types
+
+A tuple can store different types of values together.
+
+```python
+student = ("Sanchita", 22, "Cuttack", 9.02)
+```
+
+---
+
+# Tuple Methods
+
+Assume
+
+```python
+tup = (2, 1, 3, 1)
+```
+
+---
+
+## index()
+
+Returns the index of the first occurrence of an element.
+
+```python
+tup.index(1)
+```
+
+Output
+
+```text
+1
+```
+
+---
+
+## count()
+
+Returns the total number of occurrences of an element.
+
+```python
+tup.count(1)
+```
+
+Output
+
+```text
+2
+```
+
+---
+
+# Difference Between List and Tuple
+
+| List | Tuple |
+|------|-------|
+| Mutable | Immutable |
+| Uses `[]` | Uses `()` |
+| Can be modified | Cannot be modified |
+| More methods available | Fewer methods available |
+
+---
+
+# DAY - 3 PROGRAMS FOR BETTER REFERENCE
+
+- [📂 DAY3](./DAY3/)
