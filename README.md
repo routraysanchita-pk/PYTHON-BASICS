@@ -518,6 +518,7 @@ print(sum)
 
 - [📂 DAY1](./DAY1/)
 
+---
 
 # 🐍 DAY 2 - Strings & Conditional Statements
 
@@ -920,26 +921,6 @@ elif marks >= 50:
 else:
     print("Fail")
 ```
-
----
-
-# Summary
-
-✅ Strings
-
-- Creating Strings
-- Escape Sequences
-- String Operations
-- Indexing
-- Slicing
-- Negative Indexing
-- String Functions
-
-✅ Conditional Statements
-
-- if
-- if-else
-- if-elif-else
 
 ---
 
