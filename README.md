@@ -515,6 +515,6 @@ print(sum)
 
 ---
 
-# DAY - 1 NOTES
+# DAY - 1 PROGRAMS FOR BETTER REFERENCE
 
 - [📂 DAY1](./DAY1/)
