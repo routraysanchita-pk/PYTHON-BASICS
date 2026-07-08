@@ -1,4 +1,5 @@
 # 🐍 Python Basics Notes
+# DAY - 1
 
 ---
 
@@ -60,12 +61,6 @@ Examples:
 A **variable** is the name of a memory location used to store data.
 
 ## Memory Representation
-
-```text
-Variable Name  -------->  Memory Location  -------->  Value
-
-age --------------------> 0x101 -----------> 22
-```
 
 ### Rules for Variables
 - Used to store data.
@@ -144,7 +139,7 @@ student_name
 total_marks
 ```
 
-❌ Bad
+CAN BE CONSIDERED BUT NOT MEANINGFUL
 
 ```python
 a
