@@ -993,7 +993,7 @@ Eligible for Scholarship
 
 ---
 
-# 🐍 Day 3: Lists & Tuples
+# 🐍 DAY 3 - Lists & Tuples
 
 ---
 
