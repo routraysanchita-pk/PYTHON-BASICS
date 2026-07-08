@@ -512,3 +512,9 @@ sum = a + b
 
 print(sum)
 ```
+
+---
+
+# DAY - 1 NOTES
+
+- [📂 DAY1](./DAY1/)
