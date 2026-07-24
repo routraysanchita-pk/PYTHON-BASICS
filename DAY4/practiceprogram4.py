@@ -1,0 +1,5 @@
+#FIGURE OUT A WAY TO STORE 9 AND 9.0 AS SEPARATE VALUES IN THE SET
+
+set={"9",9.0}
+
+print(set)
