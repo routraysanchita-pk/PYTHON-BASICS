@@ -1811,38 +1811,6 @@ Output
 
 ---
 
-# Difference Between List, Dictionary and Set
-
-| List | Dictionary | Set |
-|------|------------|-----|
-| Ordered | Key-Value Pairs | Unordered |
-| Mutable | Mutable | Mutable |
-| Allows Duplicates | Duplicate Keys Not Allowed | Duplicate Elements Not Allowed |
-| Uses `[]` | Uses `{key:value}` | Uses `{}` |
-
----
-
-# Summary
-
-## Dictionary
-
-- Creating Dictionary
-- Accessing Values
-- Updating Values
-- Nested Dictionary
-- Dictionary Methods
-
-## Set
-
-- Creating Sets
-- Empty Set
-- Unique Elements
-- Set Methods
-- Union
-- Intersection
-
----
-
 # DAY - 4 PROGRAMS FOR BETTER REFERENCE
 
 - [📂 DAY4](./DAY4/)
