@@ -1426,3 +1426,427 @@ Output
 # DAY - 3 PROGRAMS FOR BETTER REFERENCE
 
 - [📂 DAY3](./DAY3/)
+   
+---
+
+# 🐍 Day 4: Dictionary & Set
+
+---
+
+# Dictionary
+
+A **dictionary** is a built-in data type used to store data in **key-value pairs**.
+
+### Characteristics
+
+- Stores data as **key : value** pairs.
+- Dictionaries are **unordered**.
+- Dictionaries are **mutable**.
+- Duplicate **keys are not allowed**.
+
+---
+
+## Creating a Dictionary
+
+```python
+info = {
+    "name": "Sanchita Routray",
+    "CGPA": 9.02,
+    "is_adult": True
+}
+```
+
+---
+
+## Accessing Values
+
+Access a value using its key.
+
+### Syntax
+
+```python
+dictionary_name["key"]
+```
+
+### Example
+
+```python
+info["name"]
+```
+
+Output
+
+```text
+Sanchita Routray
+```
+
+---
+
+## Modifying or Adding a Key-Value Pair
+
+Since dictionaries are mutable, values can be modified or new key-value pairs can be added.
+
+### Syntax
+
+```python
+dictionary_name["new_key"] = value
+```
+
+### Example
+
+```python
+info["CGPA"] = 9.12
+```
+
+---
+
+## Length of a Dictionary
+
+Use the `len()` function to count the number of key-value pairs.
+
+```python
+len(info)
+```
+
+Output
+
+```text
+3
+```
+
+---
+
+## Overwriting an Existing Key
+
+If the key already exists, its value gets updated.
+
+```python
+info["CGPA"] = 9.12
+```
+
+---
+
+# Nested Dictionary
+
+A dictionary can contain another dictionary as its value.
+
+### Example
+
+```python
+student = {
+    "name": "Sanchita Routray",
+    "SGPA": {
+        "1st Sem": 8.94,
+        "2nd Sem": 9.26,
+        "3rd Sem": 9.22
+    }
+}
+```
+
+---
+
+## Accessing Nested Values
+
+### Syntax
+
+```python
+dictionary_name["outer_key"]["inner_key"]
+```
+
+### Example
+
+```python
+student["SGPA"]["1st Sem"]
+```
+
+Output
+
+```text
+8.94
+```
+
+---
+
+## Adding a New Key in Nested Dictionary
+
+```python
+student["SGPA"]["4th Sem"] = 9.13
+```
+
+---
+
+# Dictionary Methods
+
+Assume
+
+```python
+mydict = {
+    "name": "Sanchita",
+    "age": 22
+}
+```
+
+---
+
+## keys()
+
+Returns all keys.
+
+```python
+mydict.keys()
+```
+
+---
+
+## values()
+
+Returns all values.
+
+```python
+mydict.values()
+```
+
+---
+
+## items()
+
+Returns all key-value pairs as tuples.
+
+```python
+mydict.items()
+```
+
+---
+
+## get()
+
+Returns the value associated with the given key.
+
+```python
+mydict.get("name")
+```
+
+---
+
+## update()
+
+Adds items from another dictionary to the existing dictionary.
+
+```python
+newdict = {"city": "Cuttack"}
+
+mydict.update(newdict)
+```
+
+---
+
+## Difference Between `[]` and `get()`
+
+Suppose the key does not exist.
+
+Using square brackets:
+
+```python
+mydict["salary"]
+```
+
+❌ Produces a **KeyError**.
+
+Using `get()`:
+
+```python
+mydict.get("salary")
+```
+
+Output
+
+```text
+None
+```
+
+No error is generated.
+
+---
+
+# Set
+
+A **set** is a collection of **unordered** and **unique** elements.
+
+### Characteristics
+
+- Unordered collection.
+- Elements must be unique.
+- Elements are immutable.
+- The set itself is mutable.
+
+---
+
+## Creating a Set
+
+```python
+num = {1, 2, 3, 4}
+```
+
+Duplicate values are automatically removed.
+
+```python
+s = {1, 2, 2}
+```
+
+Output
+
+```python
+{1, 2}
+```
+
+---
+
+## Empty Set
+
+Use the `set()` constructor.
+
+```python
+empty_set = set()
+```
+
+> `{}` creates an empty dictionary, **not** an empty set.
+
+---
+
+## Allowed Data Types
+
+Immutable data types can be stored in a set.
+
+Examples
+
+- Integer
+- Float
+- String
+- Tuple
+
+Lists and dictionaries **cannot** be stored because they are mutable.
+
+---
+
+# Set Methods
+
+Assume
+
+```python
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+```
+
+---
+
+## add()
+
+Adds an element.
+
+```python
+set1.add(4)
+```
+
+---
+
+## remove()
+
+Removes the specified element.
+
+```python
+set1.remove(2)
+```
+
+---
+
+## pop()
+
+Removes a random element.
+
+```python
+set1.pop()
+```
+
+---
+
+## clear()
+
+Removes all elements from the set.
+
+```python
+set1.clear()
+```
+
+---
+
+## union()
+
+Combines two sets and returns a new set.
+
+```python
+set1.union(set2)
+```
+
+Output
+
+```python
+{1, 2, 3, 4, 5}
+```
+
+---
+
+## intersection()
+
+Returns only the common elements.
+
+```python
+set1.intersection(set2)
+```
+
+Output
+
+```python
+{3}
+```
+
+---
+
+# Difference Between List, Dictionary and Set
+
+| List | Dictionary | Set |
+|------|------------|-----|
+| Ordered | Key-Value Pairs | Unordered |
+| Mutable | Mutable | Mutable |
+| Allows Duplicates | Duplicate Keys Not Allowed | Duplicate Elements Not Allowed |
+| Uses `[]` | Uses `{key:value}` | Uses `{}` |
+
+---
+
+# Summary
+
+## Dictionary
+
+- Creating Dictionary
+- Accessing Values
+- Updating Values
+- Nested Dictionary
+- Dictionary Methods
+
+## Set
+
+- Creating Sets
+- Empty Set
+- Unique Elements
+- Set Methods
+- Union
+- Intersection
+
+---
+
+# DAY - 4 PROGRAMS FOR BETTER REFERENCE
+
+- [📂 DAY4](./DAY4/)
+   
+---
+
+
